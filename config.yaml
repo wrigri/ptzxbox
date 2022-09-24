@@ -1,0 +1,42 @@
+debug: true
+network:
+  ipAddress:    127.0.0.1  # Localhost for testing, change to Camera IP Address.
+  shortCmdPort:      1259  # PTZOptics cameras can be controlled with short commands on this port.
+  longCmdPort:      52381
+  useShortCommands: true
+controller:
+  deadZones:
+    low:  0.2
+    high: 0.95
+camera:
+  maxPanSpeed:     14   # 24 is highest
+  minPanSpeed:      1   #  1 is lowest
+  defaultPanSpeed:  5
+  maxTiltSpeed:    14   # 20 is highest
+  minTiltSpeed:     1   #  1 is lowest
+  defaultTiltSpeed: 5
+  maxZoomSpeed:     7   #  7 is highest
+  minZoomSpeed:     0   #  0 is lowest
+  defaultZoomSpeed: 2
+presets:
+  panSpeed:  15   # Applies to all presets, unless overridden
+  tiltSpeed: 15   # Applies to all presets, unless overridden
+  A:
+    pan:   0x00B2  # Can use ptz_query.exe to get current values.
+    tilt:  0xFFB3
+    zoom:  0x12E3
+    panSpeed:   9 # Override Example
+    tiltSpeed:  8 # Override Example
+  B:
+    pan:   0x00C1
+    tilt:  0xFF23
+    zoom:  0x1000
+  X:
+    pan:   0x00B2
+    tilt:  0xFFB3
+    zoom:  0x12E3
+  Y:
+    pan:   0x00B2
+    tilt:  0xFFB3
+    zoom:  0x12E3
+
