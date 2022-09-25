@@ -10,9 +10,9 @@ import (
 )
 
 const outputTemplate string = `Current Position:
-  Pan:  %s
-  Tilt: %s
-  Zoom: %s
+    pan:   %s
+    tilt:  %s
+    zoom:  %s
 `
 
 func getZoom() string {

@@ -97,7 +97,7 @@ func (cfg *ConfigData) Update() error {
 	}
 
 	if cfg.Debug {
-		Logger.Infof("Updated Config:\n%#v", cfg)
+		Logger.Infof("Updated Config:\n%+v", cfg)
 	}
 	return nil
 
