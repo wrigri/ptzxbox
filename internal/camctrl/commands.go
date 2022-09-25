@@ -1,8 +1,6 @@
 package camctrl
 
 import (
-	"fmt"
-
 	"github.com/wrigri/ptzxbox/internal/config"
 	"github.com/wrigri/ptzxbox/internal/util"
 )
@@ -133,7 +131,7 @@ func Reset() {
 	sendCommand(command)
 }
 
-func GoToPosition2(preset config.Preset) {
+func GoToPresetPosition(preset config.Preset) {
 	panBytes := util.GetBytesFromPosHex(preset.Pan)
 	tiltBytes := util.GetBytesFromPosHex(preset.Tilt)
 	zoomBytes := util.GetBytesFromPosHex(preset.Zoom)
@@ -186,10 +184,6 @@ func GoToPosition(pan, tilt, zoom, panSpeed, tiltSpeed int) {
 	panTiltCommand = append(panTiltCommand, 0xFF)
 	sendCommand(panTiltCommand)
 
-}
-
-func Scene(scene int) {
-	fmt.Printf("Changing to Scene %d\n", scene)
 }
 
 func ZoomInDefault() {

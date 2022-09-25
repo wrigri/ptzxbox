@@ -16,13 +16,13 @@ func ButtonChange(buttonName string, newValue bool, oldValue bool) {
 				config.Config.Update()
 				camctrl.Reset()
 			case "A":
-				camctrl.GoToPosition2(config.Config.Presets.A)
+				camctrl.GoToPresetPosition(config.Config.Presets.A)
 			case "B":
-				camctrl.GoToPosition2(config.Config.Presets.B)
+				camctrl.GoToPresetPosition(config.Config.Presets.B)
 			case "X":
-				camctrl.GoToPosition2(config.Config.Presets.X)
+				camctrl.GoToPresetPosition(config.Config.Presets.X)
 			case "Y":
-				camctrl.GoToPosition2(config.Config.Presets.Y)
+				camctrl.GoToPresetPosition(config.Config.Presets.Y)
 			case "LeftShoulder":
 				if config.ManualFocus {
 					camctrl.FocusFar()
